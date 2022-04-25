@@ -1,18 +1,20 @@
-
-  
 import { Component } from '@angular/core';
-import { User} from './user';
+import { Router } from '@angular/router';
+import { User1} from './user';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'tdfForm';
-  topics =['angular','react','php'];
-  userModel=new User('','18euee065@skcet.ac.in',635241789,'');
-  onSubmit()
-  {
-    console.log(this.userModel);
+  title = 'Login';
+
+  userLogin=new User1('Nithiya','Nithiya@03');
+
+  constructor(private router:Router){}
+
+  btnClick(){
+    this.router.navigate(['login']);
   }
 }
