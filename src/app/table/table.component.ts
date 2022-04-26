@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { LoginService } from '../login/login.service';
+import { User } from '../login/user1';
+// import { LoginService } from '../service/login.service';
 
 @Component({
   selector: 'app-table',
@@ -6,10 +9,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./table.component.scss']
 })
 export class TableComponent implements OnInit {
-
-  constructor() { }
+  userList: User[] = [];
+  constructor(private login:LoginService) { }
 
   ngOnInit(): void {
+    this.userList=this.login.getMessage()
   }
 
 }

@@ -1,29 +1,4 @@
 
-  <nav class="navbar">
-  
-    <div class="container">
-      <h1>Login</h1>
-      <form #userForm="ngForm" novalidate>
-       
     
-        <div class="form-login">
-          <label>userName</label>
-          <input type="text" #username="ngModel" class="form-control" [class.is-invalid]="username.invalid && username.touched" name="username" [(ngModel)]="userLogin.username" required> 
-          <small class="text-danger" [class.d-none]="username.valid || username.untouched">Name is required</small>
-        </div><br>
-    
-        <div class="form-login">
-          <label>Password</label>
-          <input type="text" #password="ngModel" class="form-control" [class.is-invalid]="password.invalid && password.touched" name="password" [(ngModel)]="userLogin.password" required> 
-          <small class="text-danger" [class.d-none]="password.valid || password.untouched">password is required</small><br>
-        </div>
-    
-      <button [disabled]="userForm.form.invalid" type="submit" class="btn btn-primary" (click)="btnClick()">submit</button><br><br>
-       
-    
-     </form>
-    </div>
-    </nav>
-    
-
+<app-nav-bar></app-nav-bar>
 <router-outlet></router-outlet>

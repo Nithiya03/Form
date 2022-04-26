@@ -1,1 +1,22 @@
-<p>table works!</p>
+<div class="container" style="margin-top: 20px;">
+    <table >
+        <ng-template pTemplate="header">
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Mobile</th>
+                <th>DOB</th>
+                <th>Gender</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-user>
+            <tr>
+                <td>{{user.name}}</td>
+                <td>{{user.email}}</td>
+                <td>{{user.mobile}}</td>
+                <td>{{user.gender}}</td>
+            </tr>
+        </ng-template>
+    </table>
+</div>
+

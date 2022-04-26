@@ -3,8 +3,9 @@ export class User {
     constructor(
         public name:string,
         public email:string,
-        public phone:number,
-        public topic:string
+        public mobile:number,
+        public topic:string,
+        public gender:string
     )
     {}
 }

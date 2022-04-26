@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Injectable } from '@angular/core';
+import { FormBuilder } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
+import { LoginService } from '../login/login.service';
 import { User } from './user1';
 
 @Component({
@@ -11,9 +14,18 @@ export class LoginComponent {
 
   title = 'tdfForm';
   topics =['angular','react','php'];
-  userModel=new User('','',0,'');
-  constructor(private router:Router){}
-  data(){
+  constructor(private router:Router,private login:LoginService,private fb: FormBuilder,private route: ActivatedRoute){}
+  userModel = this.fb.group({
+    name: [''],
+    mobile: [''],
+    email: [''],
+    gender: [''],
+    topic:['']
+
+  });
+  setMessage(userModel){
+    // this.loginService.adduser(this.userForm.value);
+    this.LoginService.addUser(this.userModel.value);
     this.router.navigate(['table']);
   }
 
