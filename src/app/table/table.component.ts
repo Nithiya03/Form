@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { LoginService } from '../login/login.service';
-import { User } from '../login/user1';
+import { LoginService } from '../service/login.service';
+import { User } from '../user1';
+import {MatIconModule} from '@angular/material/icon';
+import { ActivatedRoute, Router } from '@angular/router';
 // import { LoginService } from '../service/login.service';
 
 @Component({
@@ -13,7 +15,7 @@ export class TableComponent implements OnInit {
   constructor(private login:LoginService) { }
 
   ngOnInit(): void {
-    this.userList=this.login.getMessage()
+    this.userList=this.login.getMessage();
   }
 
 }

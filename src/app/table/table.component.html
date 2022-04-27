@@ -1,22 +1,25 @@
 <div class="container" style="margin-top: 20px;">
-    <table >
-        <ng-template pTemplate="header">
+    <h2>
+        List Of User
+    </h2>
+    <table class="table">
             <tr>
                 <th>Name</th>
                 <th>Email</th>
                 <th>Mobile</th>
-                <th>DOB</th>
                 <th>Gender</th>
+                <th>Language</th>
+                <th>View</th>
+
             </tr>
-        </ng-template>
-        <ng-template pTemplate="body" let-user>
-            <tr>
-                <td>{{user.name}}</td>
-                <td>{{user.email}}</td>
-                <td>{{user.mobile}}</td>
-                <td>{{user.gender}}</td>
+            <tr *ngFor="let u of userList">
+                <td>{{u.gender==='female'? 'Miss  ':'Mrs  '}}{{u.name}}</td>
+                <td>{{u.email}}</td>
+                <td>{{u.mobile}}</td>
+                <td>{{u.gender}}</td>
+                <td>{{u.topic}}</td>
+                <td><a class="nav-link active" aria-current="page" routerLinkActive="active"
+                    [routerLink]="['/dispaly']"><mat-icon>visibility</mat-icon></a></td> 
             </tr>
-        </ng-template>
     </table>
 </div>
-

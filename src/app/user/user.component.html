@@ -15,7 +15,7 @@
     
         <div class="form-login">
           <label>Password</label>
-          <input type="text" #password="ngModel" class="form-control" [class.is-invalid]="password.invalid && password.touched" name="password" [(ngModel)]="userLogin.password" required> 
+          <input type="password" #password="ngModel" class="form-control" [class.is-invalid]="password.invalid && password.touched" name="password" [(ngModel)]="userLogin.password" required> 
           <small class="text-danger" [class.d-none]="password.valid || password.untouched">password is required</small><br>
         </div>
     
