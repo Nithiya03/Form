@@ -6,26 +6,35 @@ import { User } from '../user1';
 })
 export class LoginService {
   public userList: User[] = [{
+    id:1,
     name: 'Nithiya',
     email: 'nithiya@gmail.com',
     gender: 'female',
     mobile: 9688931639,
     topic:'angular'
 }];
-id1:number=1;
+id1:number=0;
   constructor() { }
   setMessage(user: User){
-    // user.id = this.id1+1;
+    user.id = this.userList.length+1;
     this.userList.push(user);
+
   }
-  getMessage(){
-    return this.userList;
+  getUsersByName(name : String){
+    this.userList = this.userList.filter(x => x.name != name);
   }
-  // userName(username:User)
-  // {
-  //   return this.userList;
-  // }
-  // display(user1:User){
-  //   return this.userList;
-  // }
+  getUsers(){
+    return this.userList
+  }
+  getUsersByID(id: number){
+    return this.userList.find(x => x.id == id)
+  }
+  removeUser(name : String) {
+    this.userList = this.userList.filter(x => x.name != name);
+}
+
+  loggedIn(){
+    return localStorage.getItem(this.userList.filter(x=>x.name))
+
+  }
 }

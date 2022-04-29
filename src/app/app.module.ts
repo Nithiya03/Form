@@ -11,6 +11,8 @@ import { LoginService } from './service/login.service';
 import { MatButtonModule } from "@angular/material/button";
 import { MatIconModule } from "@angular/material/icon";
 import { DispalyComponent } from './dispaly/dispaly.component';
+import { AuthGuard } from './auth.guard';
+import {UnsavedGuard} from './unsaved.guard';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +29,7 @@ import { DispalyComponent } from './dispaly/dispaly.component';
     MatButtonModule,
     MatIconModule
   ],
-  providers: [LoginService],
+  providers: [LoginService,AuthGuard,UnsavedGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

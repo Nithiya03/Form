@@ -1,10 +1,12 @@
 
 export class User {
-    name: string=''
-    email: string=''
+    
+    id:number=0;
+    name: string='';
+    email: string='';
     mobile: number=0;
-    topic: string=''
-    gender: string=''
+    topic: string='';
+    gender: string='';
 
 
 }
