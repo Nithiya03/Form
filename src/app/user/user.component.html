@@ -19,9 +19,11 @@
           <small class="text-danger" [class.d-none]="password.valid || password.untouched">password is required</small><br>
         </div>
     
-      <button [disabled]="userForm.form.invalid" type="submit" class="btn btn-primary" (click)="btnClick()">submit</button><br><br>
+      <button [disabled]="userForm.form.invalid" type="submit" class="btn btn-primary" (click)="btnClick()">Login</button><br><br>
        
     
      </form>
     </div>
+
+    <router-outlet></router-outlet>
   

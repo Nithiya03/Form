@@ -1,10 +1,12 @@
 import { Injectable } from '@angular/core';
 import { User } from '../user1';
+import { User1 } from '../user/user';
 
 @Injectable({
   providedIn: 'root'
 })
 export class LoginService {
+  userLogin=new User1('Nithiya','Nithiya@03');
   public userList: User[] = [{
     id:1,
     name: 'Nithiya',
@@ -32,9 +34,10 @@ id1:number=0;
   removeUser(name : String) {
     this.userList = this.userList.filter(x => x.name != name);
 }
-
   loggedIn(){
-    return localStorage.getItem(this.userList.filter(x=>x.name))
-
+    return true;
+  }
+  logged(){
+    return true;
   }
 }

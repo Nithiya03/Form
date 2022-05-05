@@ -17,19 +17,6 @@ export class TableComponent implements OnInit {
 
   ngOnInit():void{
     this.user=this.login.getUsers();
-    // this.route.params.subscribe(params => {
-    // this.name = params['name'];
-    //   console.log(this.name);
-    //   if (this.name != null) {
-    //     this.userList.name=(params['name']);
-    //     const data = this.login.getUsersByName(this.name);
-    //     console.log(this.userList);
-    //     if (data) {
-    //       console.log(this.userList);
-    //       this.userList = (data);
-    //     }
-    //   }
-    // });
   }
   remove(name : string){
     localStorage.removeItem(name);

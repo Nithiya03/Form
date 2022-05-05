@@ -20,12 +20,11 @@ export class LoginComponent {
   }
   userdata()
   {
+    this.router.navigate(['/table']);
     this.login.setMessage(this.userModel);
     localStorage.setItem(this.userModel.name, JSON.stringify(this.userModel));
     // this.login.userName(this.userModel);
     // this.login.display(this.userModel);
-    this.router.navigate(['/table']);
   }
-  
   
 }
