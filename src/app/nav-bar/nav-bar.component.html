@@ -4,10 +4,10 @@
         <div  >
             <ul >
                 <li>
-                    <a class="nav-link active" aria-current="page" routerLinkActive="active"
-                        [routerLink]="['user']"  style="color: aliceblue;">Login<mat-icon>account_circle</mat-icon></a>
-                    <a class="nav-link active" aria-current="page" routerLinkActive="active"
-                        [routerLink]="['table']"  style="color: aliceblue;">userData</a>
+                    <a class="nav-link active" aria-current="page" routerLinkActive="active"  (click)="logIn()"
+                       #display *ngIf="!display" [routerLink]="['login']"  style="color: aliceblue;">Login</a>
+                    <a class="nav-link active" aria-current="page" routerLinkActive="active"  (click)="logOut()"
+                       #display *ngIf="display"  [routerLink]="['home']"  style="color: aliceblue;">Logout</a>
                 </li>
             </ul>
         </div>
