@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { LoginService } from '../service/login.service';
 import { User } from '../user1';
 @Component({
@@ -8,10 +9,17 @@ import { User } from '../user1';
 })
 export class NavBarComponent implements OnInit {
   userList: User[] = [];
-  constructor(private login:LoginService) { }
+  display :boolean = false;
+  constructor(private login:LoginService,private router:Router) { }
 
   ngOnInit(): void {
     this.userList=this.login.getUsers();
   }
 
+  logIn(){
+    this.display=true;
+  }
+  logOut(){
+    this.display=false;
+  }
 }
