@@ -8,4 +8,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Login';
+
+  myimage :string = 'assert/image/design.webp';
 }

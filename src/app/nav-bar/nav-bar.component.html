@@ -1,16 +1,15 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+<nav class="navbar navbar-expand-lg bg-secondary text-white">
     <div class="container-fluid">
-        <a class="navbar-brand" [routerLink]="['/']" style="color: aliceblue;">Angular From</a>
+        <a class="navbar-brand" [routerLink]="['/']" style="color: aliceblue;">Angular Form</a>
         <div  >
             <ul >
-                <li>
-                    <a class="nav-link active" aria-current="page" routerLinkActive="active"
-                        [routerLink]="['user']"  style="color: aliceblue;">Login<mat-icon>account_circle</mat-icon></a>
-                    <a class="nav-link active" aria-current="page" routerLinkActive="active"
-                        [routerLink]="['table']"  style="color: aliceblue;">userData</a>
-                </li>
+                <a class="nav-link active" aria-current="page" routerLinkActive="active"  (click)="logIn()"
+                #display *ngIf="!display" [routerLink]="['login']"  style="color: aliceblue;"><mat-icon>account_circle</mat-icon>Login</a>
+             <a class="nav-link active" aria-current="page" routerLinkActive="active"  (click)="logOut()"
+                #display *ngIf="display"  [routerLink]="['home']"  style="color: aliceblue;"><mat-icon>account_circle</mat-icon>Logout</a>
             </ul>
         </div>
 
     </div>
 </nav>
+

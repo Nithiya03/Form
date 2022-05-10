@@ -11,8 +11,9 @@ import { LoginService } from './service/login.service';
 import { MatButtonModule } from "@angular/material/button";
 import { MatIconModule } from "@angular/material/icon";
 import { DispalyComponent } from './dispaly/dispaly.component';
-import { AuthGuard } from './auth.guard';
-import {UnsavedGuard} from './unsaved.guard';
+import { HomeComponent } from './home/home.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +21,9 @@ import {UnsavedGuard} from './unsaved.guard';
     TableComponent,
     NavBarComponent,
     UserComponent,
-    DispalyComponent
+    DispalyComponent,
+    HomeComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +32,7 @@ import {UnsavedGuard} from './unsaved.guard';
     MatButtonModule,
     MatIconModule
   ],
-  providers: [LoginService,AuthGuard,UnsavedGuard],
+  providers: [LoginService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

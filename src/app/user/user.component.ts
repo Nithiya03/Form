@@ -10,15 +10,13 @@ import { User1} from './user';
 export class UserComponent implements OnInit {
 
   
-  userLogin=new User1('Nithiya','Nithiya@03');
+  userLogin=new User1('','');
 
   constructor(private router:Router){}
-
-  btnClick(){
-    this.router.navigate(['/login']);
-  }
-
   ngOnInit(): void {
+  }
+  btnClick(){
+    this.router.navigate(['/userlist']);
   }
 
 }

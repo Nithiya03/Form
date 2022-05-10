@@ -19,10 +19,12 @@ export class TableComponent implements OnInit {
     this.user=this.login.getUsers();
   }
   remove(name : string){
-    localStorage.removeItem(name);
     console.warn("remove id :" + name);
     this.login.removeUser(name);
     this.user = this.login.getUsers(); 
   }
 
+  adduser(){
+    this.router.navigate(['/adduser'])
+  }
 }

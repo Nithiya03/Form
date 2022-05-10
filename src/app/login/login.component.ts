@@ -15,14 +15,13 @@ export class LoginComponent {
   constructor(private router:Router,private login:LoginService){}
   ngOnInit(){
     let data = localStorage.getItem(this.userModel.name);
-    console.log(" ans "+this.userModel.name);
-    console.log(" data :"+data);
+    return data;
   }
   userdata()
   {
-    this.router.navigate(['/table']);
+    this.router.navigate(['/userlist']);
     this.login.setMessage(this.userModel);
-    localStorage.setItem(this.userModel.name, JSON.stringify(this.userModel));
+    // localStorage.setItem(this.userModel.name, JSON.stringify(this.userModel));
     // this.login.userName(this.userModel);
     // this.login.display(this.userModel);
   }

@@ -34,10 +34,4 @@ id1:number=0;
   removeUser(name : String) {
     this.userList = this.userList.filter(x => x.name != name);
 }
-  loggedIn(){
-    return true;
-  }
-  logged(){
-    return true;
-  }
 }

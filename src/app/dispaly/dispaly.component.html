@@ -1,12 +1,9 @@
 
-<div class="container" style="margin-top: 20px;">
-    <table class="table">
-        <tr >
-            <td>Name     :{{userList.gender==='female'? 'Miss  ':'Mrs  '}}{{userList.name}}</td>
-            <td>Email    :{{userList.email}}</td>
-            <td>Mobile   :{{userList.mobile}}</td>
-            <td>Gender   :{{userList.gender}}</td>
-            <td>Language :{{userList.topic}}</td>
-        </tr>
-</table>
+<div class="border bg-secondary text-white w-50  p-5">
+    <h3>{{userList.name}} Detail</h3><hr>
+        Name     :{{userList.gender==='female'? 'Miss  ':'Mrs  '}}{{userList.name}}<br><br>
+        Email    :{{userList.email}}<br><br>
+        Mobile   :{{userList.mobile}}<br><br>
+        Gender   :{{userList.gender}}<br><br>
+        Language :{{userList.topic}}<br><br>    
 </div>

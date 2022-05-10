@@ -1,8 +1,9 @@
 <div class="container" style="margin-top: 20px;">
     <h2>
         List Of User
-    </h2>
+    </h2><br><br>
     <table class="table">
+          <thead>
             <tr>
                 <th>Name</th>
                 <th>Email</th>
@@ -11,8 +12,9 @@
                 <th>Language</th>
                 <th>View</th>
                 <th>Remove</th>
-
             </tr>
+          </thead>
+          <tbody>
             <tr *ngFor="let u of user">
                 <td>{{u.gender==='female'? 'Miss  ':'Mrs  '}}{{u.name}}</td>
                 <td>{{u.email}}</td>
@@ -20,9 +22,12 @@
                 <td>{{u.gender}}</td>
                 <td>{{u.topic}}</td>
                 <td><a class="nav-link active" aria-current="page" routerLinkActive="active"
-                    [routerLink]="['/dispaly',u.id]"><mat-icon>visibility</mat-icon></a></td> 
-                <td><button type="submit" class="btn btn-primary" (click)="remove(u.name)"></button>Remove</td><hr>
+                    [routerLink]="['/userdetail',u.id]"><mat-icon>visibility</mat-icon></a></td> 
+                <td><button type="submit" class="btn btn-primary" (click)="remove(u.name)">Remove</button></td><hr>
                 <!-- <td><button type="submit" class="btn btn-primary" ></button>Edit</td> -->
             </tr>
+          </tbody>
+          <br>
+            <button (click)="adduser()">AddUser</button>
     </table>
 </div>
