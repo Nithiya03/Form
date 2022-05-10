@@ -1,8 +1,10 @@
-import { Component, Input, OnInit } from '@angular/core';
+
+import {  Input, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { LoginService } from '../service/login.service';
 import { User } from '../user1';
 import { User1 } from '../user/user';
-import { Router } from '@angular/router';
 @Component({
   selector: 'app-nav-bar',
   templateUrl: './nav-bar.component.html',
